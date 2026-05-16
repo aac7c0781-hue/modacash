@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ModaCash Dashboard</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial;
+    }
+
+    body{
+      background:#0f0f0f;
+      color:white;
+    }
+
+    .navbar{
+      background:#1a1a1a;
+      padding:20px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .navbar h1{
+      color:gold;
+    }
+
+    .balance-box{
+      background:linear-gradient(135deg,#1f1f1f,#2a2a2a);
+      margin:20px;
+      padding:30px;
+      border-radius:15px;
+      text-align:center;
+      box-shadow:0 0 20px rgba(255,215,0,0.1);
+    }
+
+    .balance-box h2{
+      color:#aaa;
+      margin-bottom:10px;
+    }
+
+    .balance{
+      font-size:45px;
+      color:gold;
+      font-weight:bold;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:20px;
+      padding:20px;
+    }
+
+    .card{
+      background:#1b1b1b;
+      padding:25px;
+      border-radius:15px;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 0 15px rgba(255,215,0,0.2);
+    }
+
+    .card h3{
+      color:gold;
+      margin-bottom:10px;
+    }
+
+    .card p{
+      color:#aaa;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:15px;
+      background:gold;
+      color:black;
+      padding:10px 20px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .vip{
+      margin:20px;
+      background:#1a1a1a;
+      padding:25px;
+      border-radius:15px;
+      text-align:center;
+    }
+
+    .vip h2{
+      color:gold;
+      margin-bottom:10px;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="navbar">
+    <h1>ModaCash</h1>
+
+    <div>
+      VIP Member
+    </div>
+  </div>
+
+  <div class="balance-box">
+    <h2>Total Balance</h2>
+
+    <div class="balance">
+      $125.00
+    </div>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Watch Ads</h3>
+
+      <p>
+        Earn rewards by watching ads
+      </p>
+
+      <a href="#" class="btn">
+        Start
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Deposit</h3>
+
+      <p>
+        Add funds to your account
+      </p>
+
+      <a href="#" class="btn">
+        Deposit
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Withdraw</h3>
+
+      <p>
+        Withdraw your earnings
+      </p>
+
+      <a href="#" class="btn">
+        Withdraw
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>VIP Plans</h3>
+
+      <p>
+        Upgrade your membership
+      </p>
+
+      <a href="#" class="btn">
+        Upgrade
+      </a>
+    </div>
+
+  </div>
+
+  <div class="vip">
+    <h2>Your Current Plan</h2>
+
+    <p>
+      VIP Starter - Active
+    </p>
+  </div>
+
+</body>
+</html>
