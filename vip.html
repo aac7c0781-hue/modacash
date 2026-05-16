@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIP Plans</title>
+
+<style>
+
+body{
+background:#0f0f0f;
+font-family:Arial;
+color:white;
+padding:20px;
+direction:rtl;
+}
+
+h1{
+text-align:center;
+color:gold;
+margin-bottom:30px;
+}
+
+.plans{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:#1b1b1b;
+padding:25px;
+border-radius:15px;
+text-align:center;
+}
+
+.card h2{
+color:gold;
+}
+
+.price{
+font-size:35px;
+margin:15px 0;
+}
+
+button{
+background:gold;
+border:none;
+padding:12px 25px;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>باقات VIP</h1>
+
+<div class="plans">
+
+<div class="card">
+<h2>Starter</h2>
+<div class="price">$15</div>
+<p>3 أيام</p>
+<button>اشتراك</button>
+</div>
+
+<div class="card">
+<h2>Silver</h2>
+<div class="price">$45</div>
+<p>3 أيام</p>
+<button>اشتراك</button>
+</div>
+
+<div class="card">
+<h2>Gold</h2>
+<div class="price">$120</div>
+<p>3 أيام</p>
+<button>اشتراك</button>
+</div>
+
+</div>
+
+</body>
+</html>
