@@ -1,15 +1,113 @@
-<a href="dashboard.html">
-  <button style="
-    width:100%;
-    padding:14px;
-    border:none;
-    border-radius:10px;
-    background:gold;
-    color:black;
-    font-size:17px;
-    font-weight:bold;
-    cursor:pointer;
-  ">
-    Register
-  </button>
-</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ModaCash Register</title>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+<style>
+body{
+background:#000;
+font-family:Arial;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+color:white;
+}
+
+.box{
+background:#111;
+padding:30px;
+border-radius:20px;
+width:320px;
+box-shadow:0 0 20px gold;
+}
+
+h1{
+color:gold;
+text-align:center;
+}
+
+input{
+width:100%;
+padding:15px;
+margin-top:15px;
+border:none;
+border-radius:10px;
+background:#222;
+color:white;
+font-size:16px;
+}
+
+button{
+width:100%;
+padding:15px;
+margin-top:20px;
+border:none;
+border-radius:10px;
+background:gold;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
+a{
+color:gold;
+text-decoration:none;
+}
+
+p{
+text-align:center;
+margin-top:20px;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+<h1>ModaCash</h1>
+
+<input type="email" id="email" placeholder="Email">
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="register()">Register</button>
+
+<p>Already have account?
+<a href="login.html">Login</a>
+</p>
+</div>
+
+<script>
+
+const supabase = window.supabase.createClient(
+'https://yiqlbihcdmkurkdvigkv.supabase.co',
+'sb_publishable_egcoruMWYFYXjegel6IX3A_U7MjC7Nt'
+);
+
+async function register(){
+
+const email = document.getElementById("email").value;
+const password = document.getElementById("password").value;
+
+const { data, error } = await supabase.auth.signUp({
+email: email,
+password: password
+});
+
+if(error){
+alert(error.message);
+}else{
+alert("Account Created Successfully");
+window.location.href="login.html";
+}
+
+}
+
+</script>
+
+</body>
+</html>
