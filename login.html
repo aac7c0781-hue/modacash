@@ -1,132 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ModaCash Login</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ModaCash Login</title>
 
-  <style>
+<style>
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial;
-    }
+body{
+background:#0f0f0f;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+font-family:Arial;
+margin:0;
+color:white;
+}
 
-    body{
-      background:#0f0f0f;
-      height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:white;
-    }
+.box{
+background:#1b1b1b;
+padding:30px;
+border-radius:20px;
+width:320px;
+}
 
-    .login-box{
-      width:350px;
-      background:#1b1b1b;
-      padding:35px;
-      border-radius:15px;
-      box-shadow:0 0 20px rgba(255,215,0,0.2);
-    }
+h1{
+text-align:center;
+color:gold;
+}
 
-    .logo{
-      text-align:center;
-      margin-bottom:30px;
-    }
+input{
+width:100%;
+padding:15px;
+margin-top:15px;
+border:none;
+border-radius:10px;
+background:#2a2a2a;
+color:white;
+}
 
-    .logo h1{
-      color:gold;
-      font-size:42px;
-    }
+button{
+width:100%;
+padding:15px;
+margin-top:20px;
+border:none;
+border-radius:10px;
+background:gold;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
 
-    .logo p{
-      color:#999;
-      margin-top:5px;
-    }
-
-    .input-group{
-      margin-bottom:18px;
-    }
-
-    .input-group input{
-      width:100%;
-      padding:14px;
-      border:none;
-      border-radius:10px;
-      background:#2a2a2a;
-      color:white;
-      font-size:15px;
-    }
-
-    .input-group input:focus{
-      outline:none;
-      border:1px solid gold;
-    }
-
-    .login-btn{
-      width:100%;
-      padding:14px;
-      border:none;
-      border-radius:10px;
-      background:gold;
-      color:black;
-      font-size:17px;
-      font-weight:bold;
-      cursor:pointer;
-    }
-
-    .login-btn:hover{
-      opacity:0.8;
-    }
-
-    .bottom-text{
-      text-align:center;
-      margin-top:20px;
-      color:#aaa;
-    }
-
-    .bottom-text a{
-      color:gold;
-      text-decoration:none;
-    }
-
-  </style>
-
+</style>
 </head>
 
 <body>
 
-  <div class="login-box">
+<div class="box">
 
-    <div class="logo">
-      <h1>ModaCash</h1>
-      <p>Login To Your Account</p>
-    </div>
+<h1>ModaCash</h1>
 
-    <form>
+<input type="email" placeholder="Email">
 
-      <div class="input-group">
-        <input type="email" placeholder="Email Address" required>
-      </div>
+<input type="password" placeholder="Password">
 
-      <div class="input-group">
-        <input type="password" placeholder="Password" required>
-      </div>
+<button onclick="login()">
+Login
+</button>
 
-      <button class="login-btn">
-        Login
-      </button>
+</div>
 
-    </form>
+<script>
 
-    <div class="bottom-text">
-      Don't have account?
-      <a href="register.html">Register</a>
-    </div>
+function login(){
 
-  </div>
+window.location.href="dashboard.html";
+
+}
+
+</script>
 
 </body>
 </html>
